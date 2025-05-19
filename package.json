@@ -32,6 +32,7 @@
     "globals": "^16.1.0",
     "husky": "^9.1.7",
     "prettier": "^3.5.3",
+    "pretty-quick": "^4.1.1",
     "typescript": "4.4.4",
     "typescript-eslint": "^8.32.1"
   },
@@ -43,14 +44,23 @@
     ]
   },
   "lint-staged": {
-    "*.{js,css,md,ts,tsx,json}": "prettier --write"
+    "*.{js,css,md,ts,tsx,json}": "prettier --write",
+    "*.{js,jsx,ts,tsx}": "eslint --fix"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "prepare": "husky"
+    "prepare": "husky",
+    "pre-commit": "pretty-quick --staged && lint-staged",
+    "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run pre-commit",
+      "commit-msg": "npm run commit-msg"
+    }
   },
   "browserslist": [
     ">0.2%",
