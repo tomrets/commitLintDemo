@@ -24,7 +24,7 @@
     "@typescript-eslint/parser": "^8.32.1",
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/eslint-config-typescript": "^14.5.0",
-    "eslint": "^9.26.0",
+    "eslint": "8.37.0",
     "eslint-define-config": "^2.1.0",
     "eslint-plugin-prettier": "^5.4.0",
     "eslint-plugin-react": "^7.37.5",
@@ -44,8 +44,8 @@
     ]
   },
   "lint-staged": {
-    "*.{js,css,md,ts,tsx,json}": "prettier --write",
-    "*.{js,jsx,ts,tsx}": "eslint --fix"
+    "*.{js,jsx,ts,tsx}": "eslint --fix",
+    "*.{js,css,md,ts,tsx,json}": "prettier --write"
   },
   "scripts": {
     "start": "react-scripts start",
