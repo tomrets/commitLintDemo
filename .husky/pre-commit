@@ -1,1 +1,9 @@
-npx lint-staged
+
+# npm test
+
+echo ""
+echo "====== pre-commit prettier修复、eslint、stylelint校验 ======"
+echo ""
+
+
+npx lint-staged # 校验
