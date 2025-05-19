@@ -20,8 +20,8 @@ export default defineConfig([
   },
   {
     rules: {
-      "react/jsx-uses-vars": "error",
-      "react/jsx-uses-react": "error",
+      "react/jsx-uses-vars": "error", // 修复'React' must be in scope when using JSX
+      "react/jsx-uses-react": "error", // 修复'React' must be in scope when using JSX
       "react/react-in-jsx-scope": "off" // 关闭 React 作用域检查
       // "react/jsx-runtime": "error" // 启用 JSX 运行时自动导入
     }
